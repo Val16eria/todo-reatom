@@ -1,18 +1,26 @@
-import React, {FC, useEffect} from 'react';
+import React, { FC } from 'react';
+import { useAction, useAtom } from '@reatom/npm-react';
 
-import { FlatList, Text } from 'react-native';
-
-import { TodoListStyles } from './TodoList.styles';
-import { getTodos } from "../../../../shared/api";
+import {
+	Button,
+	Text,
+	TextInput,
+	View
+} from 'react-native';
+import {
+	fetchIssues,
+	issuesAtom,
+} from '../../model/TodosModel';
 
 export const TodoList: FC = () => {
-		const response = getTodos()
-			.then((item) => console.log('response', item))
-			.catch((err) => console.log('err', err));
-		// console.log('response', response);
+	const [issues] = useAtom(issuesAtom);
+	const handleSearch = useAction(fetchIssues);
 
 	return (
-		<Text>список</Text>
-		// <FlatList data={} renderItem={} />
+		<View>
+			<TextInput value='hello' />
+			<Button title='получить' onPress={() => handleSearch()} />
+			{issues.map((item) => <Text key={item.id}>{item.title}</Text>)}
+		</View>
 	);
 };
