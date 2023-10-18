@@ -1,7 +1,7 @@
 {
   "name": "todo-reatom",
   "version": "1.0.0",
-  "main": "src/app/App.tsx",
+  "main": "src/app/index.tsx",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -16,6 +16,7 @@
     "axios": "^1.5.1",
     "dotenv": "^16.3.1",
     "expo": "~49.0.13",
+    "expo-checkbox": "~2.4.0",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-native": "0.72.5",

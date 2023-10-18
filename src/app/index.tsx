@@ -5,17 +5,18 @@ import { registerRootComponent } from 'expo';
 import { SafeAreaView, StatusBar, View } from 'react-native';
 
 import { TodosScreen } from '../screens/todos';
-import { AppStyles } from './App.styles';
+
+import { globalStyles } from './styles/global.styles';
 
 const ctx = createCtx();
 
-export const App: FC = () => {
+export const Index: FC = () => {
 
   return (
     <reatomContext.Provider value={ctx}>
       <SafeAreaView>
         <StatusBar barStyle="dark-content" />
-        <View style={AppStyles.container}>
+        <View style={globalStyles.container}>
           <TodosScreen />
         </View>
       </SafeAreaView>
@@ -23,4 +24,4 @@ export const App: FC = () => {
   );
 };
 
-registerRootComponent(App);
+registerRootComponent(Index);

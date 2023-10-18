@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const AppStyles = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
 	container: {
 		padding: 16,
 	},
