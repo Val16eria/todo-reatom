@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList } from 'react-native';
 
+import { TTodos } from '../../../../shared/api';
 import { TodoCard } from '../todoCard';
-import { TTodos } from '../../../../shared/api/todos';
 
 import { todoListWrapperStyles } from './TodoListWrapper.styles';
 
@@ -12,14 +12,12 @@ type TTodoListWrapper = {
 
 export const TodoListWrapper: FC<TTodoListWrapper> = ({ todos }) => {
 	return (
-		<View>
-			<FlatList
-				data={todos}
-				renderItem={({ item }) => <TodoCard key={item.id} {...item} />}
-				keyExtractor={(item) => item.id.toString()}
-				showsVerticalScrollIndicator={false}
-				contentContainerStyle={todoListWrapperStyles.list}
-			/>
-		</View>
+		<FlatList
+			data={todos}
+			renderItem={({ item }) => <TodoCard key={item.id} {...item} />}
+			keyExtractor={(item) => item.id.toString()}
+			showsVerticalScrollIndicator={false}
+			contentContainerStyle={todoListWrapperStyles.list}
+		/>
 	);
 };

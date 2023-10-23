@@ -20,7 +20,7 @@ export const TodoCard: FC<TTodoCard> = ({ id, title, completed }) => {
 			<Checkbox
 				value={completed}
 				onValueChange={handleChanged}
-				color={completed ? '#4630EB' : undefined}
+				color={completed ? '#4C8FCD' : undefined}
 			/>
 			<Text style={todoCardStyle.title}>{title}</Text>
 		</View>

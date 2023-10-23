@@ -5,7 +5,7 @@ export const todoScreenStyles = StyleSheet.create({
 		height: '100%',
 	},
 	indicatorStyle: {
-		backgroundColor: '#FF6C3A',
+		backgroundColor: '#4C8FCD',
 	},
 	tabBar: {
 		backgroundColor: 'rgba(0, 0, 0, 0)',

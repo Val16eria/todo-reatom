@@ -2,7 +2,11 @@ import React, { FC, useState } from 'react';
 import { useWindowDimensions, View } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
 
-import { TodoAllList, TodoClosedList, TodoOpenedList } from '../../features/todos';
+import {
+	TodoAllList,
+	TodoClosedList,
+	TodoOpenedList
+} from '../../features/todos';
 
 import { todoScreenStyles } from './TodoScreen.styles';
 
@@ -17,9 +21,9 @@ export const TodosScreen: FC = () => {
 
 	const [index, setIndex] = useState(0);
 	const [routes] = useState([
-		{ key: 'all', title: 'Все' },
-		{ key: 'closed', title: 'Завершенные' },
-		{ key: 'opened', title: 'Незавершенные' },
+		{ key: 'all', title: 'ALL' },
+		{ key: 'closed', title: 'COMPLETED' },
+		{ key: 'opened', title: 'OPENED' },
 	]);
 
 	return (

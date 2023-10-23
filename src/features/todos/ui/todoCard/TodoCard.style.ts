@@ -8,7 +8,8 @@ export const todoCardStyle = StyleSheet.create({
 		alignItems: 'flex-start',
 		borderWidth: 1,
 		borderStyle: 'solid',
-		borderColor: 'blue',
+		borderColor: '#4C8FCD',
+		borderRadius: 10,
 	},
 	title: {
 		flex: 1,
